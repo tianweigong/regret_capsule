@@ -1,0 +1,279 @@
+*{
+/*	border: 1px solid black;*/
+}
+/*type*/
+body{
+	font-family: Helvetica;
+}
+h1{
+	width: 1000px;
+	margin: 10px auto;
+	font-size: 32px;
+	clear: left;
+}
+ul{
+	line-height: 140%;
+	font-size: 18px;
+}
+p{
+	line-height: 140%;
+	font-size: 18px;
+	display: block;
+}
+button {
+	font-size: 18px;
+	color: white;
+	width: 150px;
+	height: 50px;
+    background-color: #90cf76;
+    border-radius: 10px;
+    border: 1px solid #75a860;
+    margin: 30px auto 0px auto;
+    display:block;
+}
+button:active {
+    background-color: #79a660;
+    box-shadow: 0px 0px 3px;
+}
+button:disabled{
+	background-color: #c9c9c9;
+	border: 1px solid #a1a1a1;
+}
+input[type="radio"] {
+	margin-left: 30px;
+}
+/*class*/
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
+.frame_big{
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #f0f0f0;
+	border-radius: 5px;
+	box-shadow: inset 1px 1px 1px 1px;
+	padding: 10px 20px 10px 20px;
+}
+
+.button_panel {
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.choice_button_panel {
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.machine_img{
+	width: 100px;
+}
+
+.frame_machine{
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+.training_anima{
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 30px;
+}
+
+.frame_capsule{
+	position: absolute;
+	margin-left: 450px;
+	margin-top:50px;
+}
+
+.cap_img{
+	width: 50px;
+}
+/*id*/
+
+#rewards_hint{
+	font-size: 20px;
+}
+
+#frame_training{
+	width: 700px;
+	height: 300px;
+	border: 1px solid black;
+	margin: auto;
+	background-color: white;
+	padding: 10px;
+}
+
+#frame_training_summary{
+	width: 700px;
+	height: 500px;
+	border: 1px solid black;
+	margin: auto;
+	background-color: white;
+	padding: 10px;
+}
+
+#frame_video{
+	width: 600px;
+	height: 700px;
+	border: 1px solid black;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+	padding: 10px;
+}
+
+.num_small{
+	font-size: 20px;
+}
+
+.machine_small{
+	width: 35px;
+	padding: 5px;
+}
+
+#ins_fig1{
+	width: 200px;
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+}
+
+#ins_fig2{
+	width: 600px;
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+}
+
+#button_training_this{
+	float: left;
+	margin-left: 100px;
+	width: 180px;
+
+}
+
+#button_training_next{
+	margin-right: 100px;
+	float: right;
+	width: 180px;
+	height: 50px;
+}
+
+
+#ins_backward{
+	float: left;
+	margin-left: 200px;
+}
+#ins_forward{
+	margin-right: 200px;
+	float: right;
+}
+
+#exp_start{
+/*	float: left;*/
+	margin-left: 200px;
+}
+#exp_next{
+	margin-right: 200px;
+	float: right;
+}
+
+#frame_main{
+	width: 600px;
+	height: 360px;
+	border: 1px solid black;
+	margin: auto;
+	border-radius: 5px;
+	background-color: white; 
+}
+
+#training_hint{
+	position: absolute;
+}
+
+#training_anima{
+	position: absolute;
+	margin-left: 100px;
+}
+
+.regret_index_l {
+	float: left;
+	text-align: left;
+}
+
+.regret_index_h{
+	float: right;
+	text-align: right;
+}
+
+#regret_img{
+	width: 240px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#regret_img_frame{
+	width: 250px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#regret_panel{
+	width: 250px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 60px;
+}
+
+#cf_img{
+	width: 240px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#cf_img_frame{
+	width: 250px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+#regret_rating{
+	-webkit-appearance: none;
+	width: 95%;
+	height: 15px;
+	background: linear-gradient(to right, #EFEBE9,green);
+	margin-top: 10px;
+	margin-bottom: 10px;
+	box-shadow: 1px 1px 1px #000000;
+}
+#regret{
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#counterfactual{
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 10px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 1);
+  cursor: pointer;
+  -webkit-appearance: none;
+}

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="static/css/styles.css">
+	<script src="static/lib/jquery.min.js"></script>
+	<title>Experiment</title>
+</head>
+<body>
+	<div id="instruction">
+		<h1> Instructions</h1>
+		<div id="ins_pre">
+			<div class="frame_big">
+				<h1>Thank you for participating in this study!</h1>
+				<p>Please read the instructions very carefully!</p> 
+				<p><b>You will have to pass a test on your understanding before you can start the experiment. </b></p>
+				<p style="color: red">Please minimize the chances of possible distractions (please switch off messengers, email, music,...)! </p>
+				<p>Please make this window as large as possible (full screen best).Please do not refresh this page during the experiment.</p>
+			</div>
+		</div>
+		<div id="ins1">
+			<div class="frame_big">
+				<p>In this experiment, we introduce a Gashapon (capsule) game, where the player can gain rewards from Gashapon  machines. Gashapon machines are blind-boxes look like this:</p>
+				<img id="ins_fig1" src="static/images/ins1.png">
+			</div>
+		</div>
+
+		<div id="ins2">
+			<div class="frame_big">
+				<p>Players can collect a capsule from the current Gashapon machine. 
+
+				<p>Before collecting, they have no idea how many rewards are inside the capsule. Once collecting, they gain rewards and move to the next round. </p>
+
+				<p>Each player can play for <span class="round_total">X</span> rounds. In each round, they can choose to collect a capsule from the current machine, or switch to the next machine. <b>Once they switch, they can never switch back the previous machines</b>.</p>
+
+				<img id="ins_fig2" src="static/images/ins2.png"><!-- should be another picture then -->
+			</div>
+		</div>
+
+
+		<div id="train">
+			<div class="frame_big">
+	            	<p>Now, you will have the chance to try out the game yourself! Remember you only have <span class="round_total">X</span> chances and you want to gain rewards <b>as much as possible</b>.</p>
+
+	            	<div id ="frame_training">
+	            		<div id="training_hint">
+	            		<p id="display_reward">Rewards: $0</p>
+	            		<p id="display_chance">Chances Left: </p>
+	            		<p id="display_machine">The Current Machine Number : 1</p>
+	            		</div>
+
+	            		<div class="frame_capsule" id="frame_capsule" style="visibility: hidden;">
+	            			<div class="frame_cap"><img class="cap_img" src="static/images/cap.png">
+	            			</div>
+	            			<p id="rewards_hint"></p>
+	            		</div>
+
+	            		<div class ="training_anima">
+	            			<div class="frame_machine" id ="frame_machine"><img class="machine_img" src="static/images/P1.png">
+	            			</div>
+	            		</div>
+
+	            		<div class ="choice_button_panel">
+						<button class="button_training" id="button_training_this" onclick="anima_choose_this()">Collect from this machine again</button>
+		    			<button class="button_training" id="button_training_next" onclick="anima_choose_next()">Switch and collect from next machine</button>
+		    			</div>
+	            	</div>
+	            	<div id="frame_training_summary">
+	            		<p>Please carefully see the summary of your choices and rewards below.</p>
+	            		<table>
+						  <tr>
+						    <th></th>
+						    <th><div id="m1"><img class="machine_small" src="static/images/P1.png"></div></th>
+						    <th><div id="m2"><img class="machine_small" src="static/images/P2.png"></div></th>
+						    <th><div id="m3"><img class="machine_small" src="static/images/P3.png"></div></th>
+						    <th><div id="m4"><img class="machine_small" src="static/images/P4.png"></div></th>
+						    <th><div id="m5"><img class="machine_small" src="static/images/P5.png"></div></th>
+						    <th><div id="m6"><img class="machine_small" src="static/images/P6.png"></div></th>
+						    <th><div id="m7"><img class="machine_small" src="static/images/P7.png"></div></th>
+						    <th><div id="m8"><img class="machine_small" src="static/images/P8.png"></div></th>
+						    <th><div id="m9"><img class="machine_small" src="static/images/P9.png"></div></th>
+						    <th><div id="m10"><img class="machine_small" src="static/images/P10.png"></div></th>
+						    <th><div id="m11"><img class="machine_small" src="static/images/P11.png"></div></th>
+						    <th><div id="m12"><img class="machine_small" src="static/images/P12.png"></div></th>
+						  </tr>
+						  <tr id="tr1">
+						    <td class="num_small" id="n1">1</td>
+						  </tr>
+						  <tr id="tr2">
+						    <td class="num_small" id="n2">2</td>
+						  </tr>
+						  <tr id="tr3">
+						    <td class="num_small" id="n3">3</td>
+
+						  </tr>
+						  <tr id="tr4">
+						    <td class="num_small" id="n4">4</td>
+						  </tr>
+						  <tr id="tr5">
+						    <td class="num_small" id="n5">5</td>
+						  </tr>
+						  <tr id="tr6">
+						    <td class="num_small" id="n6">6</td>
+						  </tr>
+						  <tr id="tr7">
+						    <td class="num_small" id="n7">7</td>
+						  </tr>
+						  <tr id="tr8">
+						    <td class="num_small" id="n8">8</td>
+						  </tr>
+						  <tr id="tr9">
+						    <td class="num_small" id="n9">9</td>
+						  </tr>
+						  <tr id="tr10">
+						    <td class="num_small" id="n10">10</td>
+						  </tr>
+						  <tr id="tr11">
+						    <td class="num_small" id="n11">11</td>
+						  </tr>
+						  <tr id="tr12">
+						    <td class="num_small" id="n12">12</td>
+						  </tr>
+						</table>
+	            	</div>
+	    	</div>
+		</div>
+
+		<div class ="button_panel">
+<!-- 			<button type="button" id="ins_backward" onclick="InsPrevClick()"> ← Previous </button> -->
+			<button type="button" id="ins_forward" onclick="InsNextClick()">  Got it! </button>
+		</div>
+	</div>
+
+	<div id="experiment">
+		<h1>Experiment</h1>
+		<div id="exp_main">
+			<div class="frame_big">
+				<p>Now please carefully observe one Player Max's choices and rewards and answer two questions.</p>
+
+				<div id ="frame_video">
+<!-- 					<video width='600' height='700' controls>
+					  <source src='static/media/short_indo.mp4' type='video/mp4'>
+					Your browser does not support the video tag.
+					</video> -->
+				</div>
+
+
+				<button type="button" id="exp_start" onclick="TrialStart()">I have watched the whole video.</button>
+
+				<div id ="regret">
+					<hr>
+					<div id="regret_img_frame"></div>
+					<p id="regret_item">1.From the summary, we can see that in the sixth round Max switch to the next machine (see the indication in the figure above).<b>To what extent do you think Max would regret for his decision in the sixth round?</b></p>
+
+					<p>Please use the sliders to give your answer.</p>
+
+					<div id="regret_panel">
+					<div class='regret_label'>Regret</div><input id='regret_rating' type ='range' onclick = 'regret_check()' min ='0' max='100' step ='1' value ='0'/><div class='regret_index_l'>not at all</div><div class='regret_index_h'>very much</div>
+					</div>
+
+				</div>
+
+				<div id ="counterfactual">
+					<hr>
+					<div id="cf_img_frame"></div>
+					<p id="cf_item">2. How much reward you think Max could gain for the sixth round if he didn't switch to the next machine (that is to say, how much reward you think it is in the blue framework of the figure above)?</p>
+
+					<p>Please input a number.</p>
+					<p>$<input type="number" name="cf_rating" id="cf_rating" min ='0' max='10000' oninput="cf_check()"></p>
+
+				</div>
+
+				<button type="button" id="next_question" onclick="NextQuestion()"> Next Question </button>
+			</div>
+		</div>
+	</div>
+	<div id="survey">
+		<h1>Thanks - you're almost done!</h1>
+		<div class="frame_big">
+			<p>Please use the interface below to provide us with some feedback about the task.</p>
+			<p><span style="color: red">*</span>Age</p>
+				<input type="number" name="age" id="age" oninput="SurveyClick()">
+			<p><span style="color: red">*</span>Gender</p>
+				<select name="gender" id="gender" onchange="SurveyClick()">
+					<option id="gender_unselected" value="--" SELECTED>
+	                <option value="female">Female</option>
+	                <option value="male">Male</option>
+	                <option value="other">Other</option>
+	                <option value="noresponse">I'd prefer not to respond</option>
+	            </select>
+            <p><span style="color: red">*</span>On a scale of 1-10 (where 10 is the most engaged), please rate how <b>ENGAGING</b> you found the learning task:</p>
+            	<select name="engaging" id="engaging" onchange="SurveyClick()">
+	                <option id="engaging_unselected" value="--" SELECTED>
+                    <option value="10">10 - Very engaging</option>
+                    <option value="9">9</option>
+                    <option value="8">8</option>
+                    <option value="7">7</option>
+                    <option value="6">6</option>
+                    <option value="5">5 - Moderately</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1</option>
+                    <option value="0">0 - Not engaged</option>
+	            </select>
+            <p><span style="color: red">*</span>On a scale of 1-10 (where 10 is the most difficult), please rate how <b>DIFFICULT</b> you found the learning task:</p>
+            	<select name="difficult" id="difficult" onchange="SurveyClick()">
+                    <option id="difficult_unselected" value="--" SELECTED>
+                    <option value="10">10 - Very difficult</option>
+                    <option value="9">9</option>
+                    <option value="8">8</option>
+                    <option value="7">7</option>
+                    <option value="6">6</option>
+                    <option value="5">5 - Moderately difficult</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1</option>
+                    <option value="0">0 - Not difficult at all</option>
+	            </select>
+            <p>(Optional) Feedback: Please write down the strategies or principles you used to solve the problems. Comments and advice on how this experiment could be improved are also welcome.</p>
+            <textarea id='text_feedback' rows="4" cols="100"></textarea>
+		</div>
+		<button type="button" id="survey_submit" onclick="SaveData()">Submit</button>
+	</div>
+	<div id="experiment_finished">
+		<h1>Thank you for participating!</h1>
+		<div class="frame_big">
+			<p>The experiment finished.</p>
+			<h1 id="give_ID"></h1>
+			<p id="finish_info"></p>
+		</div>
+	</div>
+</body>
+	<script src="static/js/script.js"></script>
+</html>
